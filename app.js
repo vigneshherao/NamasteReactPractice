@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 
 
-const Heading =function head(){
+const Heading = ()=>{
     return ( 
      <div>
         <h1>This is new</h1>
@@ -12,7 +12,16 @@ const Heading =function head(){
 )};
 
 
+const NewParaComponent = ()=>{
+    return (
+        <div>
+            <Heading/>
+            <p>This is paragraph</p>
+        </div>
+    )
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById("rootDiv"));
 
-root.render(Heading);
+root.render(<NewParaComponent/>);
